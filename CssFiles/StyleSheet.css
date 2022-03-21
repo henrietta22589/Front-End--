@@ -1,0 +1,95 @@
+﻿/*import  with Razor Syntax The Url(below),with this url, we will import a specific text form*/
+@import url("https://fonts.googleapis.com/css?family=muli&display=swap");
+/*import  with Razor Syntax The Url(below),with this url, we will import a specific text form-We are Using a different Family, for the Text which will used to  Give 
+    General informations to the Customers, about our Hair Salon.*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway:ital@1&display=swap');
+/*The asterisc(*) which is used below, is one of the CSS Universal Selectors, the use of this Selector is to select some or all the elements of html, in one time. /*/
+/*The box-sizing is one property in CSS, which allows us to control the width and height in the fields(limits) of padding and border, in every element we want*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: muli,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px; /*This controls the start point(yy`) of the pictures. In 800px the pictures start from ~(1cm) of the search bar, of the browser */
+    overflow: hidden;
+    margin: 0px;
+}
+/*We are using the Class Container, which is in Line 25 of EnterPage.html, in order to control the way of the images will be displayed*/
+.container {
+    display: flex; /*this is used in order the pictures will be displayed in a horizzontal row*/
+    width: 200px;
+}
+
+/*/*This is the Name of the Class, which is used to Control the picture of the Man and of the Woman, This Class is in Line 28&29 of EnterPage.html*/
+.panel {
+    background-size: auto 750px; /*This property controls the Width the pictures will have, when they are fully flexed*/
+    background-position: left;
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    height: 700px; /*This property controls the height, the images will have*/
+    border-radius: 100px;
+    cursor: pointer; /*This controls the icon of the cursor, when it is above of the pictures*/
+    flex: 0.5; /*This gives a space between the pictures, at  this point*/
+    margin: 10px 10px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+}
+    /*We are using the Class panel, which is in Line 28&29 of EnterPage.html, in order to enter in h3 property*/
+    /*in order to Enter in this property, we are typing first the class(.panel) which is followed by the property h3--> .panel h3*/
+    .panel h3 {
+        font-size: 36px;
+        position: absolute;
+        bottom: 20px;
+        left: 300px;
+        margin: 0px;
+        opacity: 0; /*This gives us the opportunity, to not appear the Text  when the pictures, are not being flexed*/
+        color: orangered;
+    }
+    /*We are Entering in the Class panel active, which is in the Line 28 of the Enterpage.html. The only reason we are Entering in this Class, 
+    is to give the wanted flexability in the pictures, when they are chosen*/
+    .panel.active {
+        flex: 9;
+    }
+        /*This gives us the opportunity, to not appear the Text  when the pictures, are  being flexed*/
+        .panel.active h3 {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.5s /*We use this css effect in order the text, to be displayed more properly */
+        }
+/*Because we want this page to be displayed properly, in smaller screens(like the Screen of a tablet, or a mobile-phone) we will use Media query*/
+@media(max-width:480px) {
+    .container {
+        width: auto;
+    }
+}
+
+.text
+{
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    margin-bottom:450px; /*This controls the text in which position will be in(yy') as the number becames bigger the position of the text will be greater*/
+    margin-left: 30px;
+    color: wheat;
+    letter-spacing:2px;
+}
+.HairsDay
+{
+    color:orangered;
+}
+    
+
+
+    
+
+
+
+
+
+
+
+
+    
